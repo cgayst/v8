@@ -40,20 +40,20 @@
 
   #define GREEN_LED_PORT PORTBbits.RB3
   #define GREEN_LED_TRIS TRISBbits.TRISB3
-#elif HW_V8_180207
-  #define RED_LED_PORT PORTAbits.RA7
-  #define RED_LED_TRIS TRISAbits.TRISA7
+elif HW_V8_180207
+  define RED_LED_PORT PORTAbits.RA7
+  define RED_LED_TRIS TRISAbits.TRISA7
 
-  #define BLUE_LED_PORT PORTBbits.RB3
-  #define BLUE1_LED_PORT PORTBbits.RB3
-  #define BLUE1_LED_TRIS TRISBbits.TRISB3
+  define BLUE_LED_PORT PORTBbits.RB3
+  define BLUE1_LED_PORT PORTBbits.RB3
+  define BLUE1_LED_TRIS TRISBbits.TRISB3
 
-  #define BLUE2_LED_PORT PORTBbits.RB0
-  #define BLUE2_LED_TRIS TRISBbits.TRISB0
+  define BLUE2_LED_PORT PORTBbits.RB0
+  define BLUE2_LED_TRIS TRISBbits.TRISB0
 
-  #define BLUE3_LED_PORT PORTAbits.RA6
-  #define BLUE3_LED_TRIS TRISAbits.TRISA6
-#endif
+  define BLUE3_LED_PORT PORTAbits.RA6
+  #efine BLUE3_LED_TRIS TRISAbits.TRISA6
+endif
 
 
 typedef enum {
@@ -86,14 +86,14 @@ int main(void)
 
 	GREEN_LED_TRIS = 0; // Pin as output
 	GREEN_LED_PORT = 1; // LED off
-#elif HW_V8_180207
+elif HW_V8_180207
 	BLUE1_LED_TRIS = 0; // Pin as output
 	BLUE1_LED_PORT = 1; // LED off
 	BLUE2_LED_TRIS = 0; // Pin as output
 	BLUE2_LED_PORT = 1; // LED off
 	BLUE3_LED_TRIS = 0; // Pin as output
 	BLUE3_LED_PORT = 1; // LED off
-#endif
+endif
 
     isl94208_set_write_enable(1<<FSETEN);
     isl94208_set_feature(1<<WKPOL);         // use high level for wake up
