@@ -14,5 +14,3 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
-    - name: main
-      run: make main
